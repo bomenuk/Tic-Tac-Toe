@@ -1,27 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
+using TicTacToe.AI;
 using TicTacToe.Contracts;
 
 namespace TicTacToe.Objects.Players.AIStrategies
 {
-    public class RandomStrategy : IStrategy
+    public class RandomStrategy : baseStrategy, IStrategy
     {
         public MovePosition CalculateNextMove(int?[][] board)
         {
-            var emptyCellList = new List<MovePosition>();
-            for (int i = 0; i < board.Length; i++)
-            {
-                for (int j = 0; j < board[i].Length; j++)
-                {
-                    if (!board[i][j].HasValue)
-                    {
-                        emptyCellList.Add(new MovePosition(i, j));
-                    }
-                }
-            }
+            var emptyPositionList = GetEmptyMovePositions(board);
             var rand = new Random();
-            var position = rand.Next(emptyCellList.Count);
-            return emptyCellList[position];
+            var position = rand.Next(emptyPositionList.Count);
+            return emptyPositionList[position];
         }
     }
 }
