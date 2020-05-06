@@ -1,6 +1,6 @@
 ﻿using TicTacToe.Contracts;
 
-namespace TicTacToe.Objects.Players.AIStrategies
+namespace TicTacToe.Contracts
 {
     public interface IStrategy
     {

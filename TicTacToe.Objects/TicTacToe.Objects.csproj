@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TicTacToe.AI\TicTacToe.AI.csproj" />
+    <ProjectReference Include="..\TicTacToe.Contracts\TicTacToe.Contracts.csproj" />
   </ItemGroup>
 
 </Project>

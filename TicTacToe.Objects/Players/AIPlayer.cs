@@ -1,5 +1,4 @@
 ﻿using TicTacToe.Objects.Game;
-using TicTacToe.Objects.Players.AIStrategies;
 using TicTacToe.Contracts;
 
 namespace TicTacToe.Objects.Players
